@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Объект активации (Activation object, сокращённо AO) — специальный объект,
+            который создаётся при входе в контекст функции и инициализируется свойством
+            arguments
+
+            AO = {
+                arguments: {
+                    callee: ... ,
+                    length: ... ,
+                    свойства-индексы
+                }
+            }
+        */
+
+        function foo(x, y, z) {
+            // кол-во описанных параметров функции
+            console.log(foo.length);
+
+            // кол-во реально переданных параметров
+            console.log(arguments.length);
+
+            console.log(arguments.callee);
+
+            console.log(arguments[0]); // 2
+            console.log(arguments[2]); // undefined
+        }
+
+        foo(2, 3);
+    </script>
+</body>
+</html>
