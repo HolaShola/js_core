@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function foo() {
+            console.log(this);
+        }
+        
+        foo(); // global
+        
+        console.log(foo === foo.prototype.constructor); // true
+        
+        // но при иной форме вызова той же
+        // функции, this будет иметь уже другое значение
+        
+        foo.prototype.constructor(); // foo.prototype
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var foo = {
+            bar: function () {
+                console.log(this);
+                console.log(this === foo);
+            }
+        };
+        
+        foo.bar(); // foo, true
+        
+        var exampleFunc = foo.bar;
+        
+        console.log(exampleFunc === foo.bar); // true
+        
+        // опять же, при иной форме вызова той же
+        // функции, this уже установлен в другое значение
+        
+        exampleFunc(); // global, false
+    </script>
+</body>
+</html>
