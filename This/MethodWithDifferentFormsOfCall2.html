@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var o = {
+            f: function() {
+                return this;
+            }
+        }
+
+        var o2 = {f: o.f};
+
+        console.log(o.f() === o);  //true
+        console.log(o2.f() === o2);  //true
+    </script>
+</body>
+</html>
