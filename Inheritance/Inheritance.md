@@ -1,19 +1,19 @@
-// В ES2015 класс создается так:
-class MyClass {
-  constructor(value) {
-    this._field = value;
-  }
-  myMethod() {
-    return this._field;
-  }
+// В ES2015 класс создается так:  
+class MyClass {  
+  constructor(value) {  
+    this._field = value;  
+  }  
+  myMethod() {  
+    return this._field;  
+  }  
 }
 
-var obj = new MyClass(5);
+var obj = new MyClass(5);  
 alert(obj.myMethod);
 
-Тоже самое в ES5 будет так:
-function MyClass(value) {
-  this._field = value;
+Тоже самое в ES5 будет так:  
+function MyClass(value) {  
+  this._field = value;  
 }
 
 MyClass.prototype.myMethod = function() {
