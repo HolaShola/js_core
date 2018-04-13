@@ -1,3 +1,7 @@
+http://dmitrysoshnikov.com/ecmascript/ru-chapter-3-this/  
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/this  
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions  
+
 Значение this напрямую связанно с типом исполняемого кода контекста. Определяется оно при входе в контекст и на протяжении исполнения кода контекста, является неизменным.
 
                                         activeExecutionContext = {
@@ -133,3 +137,6 @@ THIS ПРИ ВЫЗОВЕ ФУНКЦИИ В КАЧЕСТВЕ КОНСТРУКТО
                                         
                                         var a = new A();
                                         alert(a.x); // 10
+
+**В стрелочных функциях, this привязан к окружению, в котором была создана функция. В глобальной области видимости, this будет указывать на глобальный объект.**
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //В стрелочных функциях, this привязан к окружению,
+        // в котором была создана функция. В глобальной области видимости,
+        // this будет указывать на глобальный объект.
+
+        var arrowFunc = () => console.log(this);
+
+        var obj = {};
+        obj.foo = arrowFunc
+
+        arrowFunc();  // window
+        obj.foo();  // window
+
+        var objForCall = {
+            a: 1,
+            b:2
+        };
+        arrowFunc.call(objForCall); // window
+    </script>
+</body>
+</html>

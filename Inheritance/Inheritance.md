@@ -1,11 +1,11 @@
 // В ES2015 класс создается так:  
 class MyClass {  
-    constructor(value) {  
-      this._field = value;  
-    }  
-    myMethod() {  
-      return this._field;  
-    }  
+  constructor(value) {  
+    this._field = value;  
+  }  
+  myMethod() {  
+    return this._field;  
+  }  
 }
 
 var obj = new MyClass(5);  
